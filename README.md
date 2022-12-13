@@ -1,3 +1,3 @@
 # striped-wash-9070
 
-Online Bankking System
+Online Banking System
