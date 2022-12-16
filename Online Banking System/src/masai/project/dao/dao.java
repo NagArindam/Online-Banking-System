@@ -1,5 +1,6 @@
 package masai.project.dao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import masai.project.Bean.Customer;
@@ -7,23 +8,38 @@ import masai.project.Exception.CustomerException;
 
 public interface dao {
 
-	public String registerCustomer(Customer customer)throws CustomerException;
+//	public String registerCustomer(Customer customer)throws CustomerException;
+//	
+//	public Customer loginCustomer(String username, String password)throws CustomerException;
+//	
+//	public boolean checkForAccountant();
+//	
+//	public void displayHomepageOptionToUser();
+//	
+//	public void displayOptionforAccountant();
+//	
+//	public void accountantAddAccountForCustomer();
+//	
+//	public void accountantUpdateExistingCustomerAccount();
+//	
+//	public void accountantDeleteCustomerAccount(String customeremail);
+//	
+//	public void accountantViewCustomerDetais();
+//	
+//	public List<Customer> getListOfCustomer() throws SQLException, CustomerException;
+//	
+//	public int getCustomerid(String customername)throws SQLException, CustomerException;
+//
+//	public void accountantUpdateExistingCustomerAccount(String customername, String customeraddress);
 	
-	public Customer loginCustomer(String username, String password)throws CustomerException;
+	abstract void registerCustomer(int cusId, String name, String cusEmail, int pass, int bal );
 	
-	public boolean checkForAccountant();
+	abstract void loginCustomer(String email,int pass);
 	
-	public void displayHomepageOptionToUser();
+	abstract void withdrwalAmount(int actNo,int money);
 	
-	public void accountantAddAccountForCustomer();
+	abstract void depositAmount(int actNo,int money);
 	
-	public void accountantUpdateExistingCustomerAccount();
-	
-	public void accountantDeleteCustomerAccount();
-	
-	public void accountantViewCustomerDetais();
-	
-	public List<Customer> getListOfCustomer();
-	
+	abstract void showTransaction(int actn);
 	
 }

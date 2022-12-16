@@ -2,35 +2,70 @@ package masai.project.Bean;
 
 public class Customer {
 
-	private String username;
-	private String password;
+	private int actNo;
+	private String name;
+	private String email;
+	private String pass;
+	private String balance;
 	
-	public String getUsername() {
-		return username;
+	public int getActNo() {
+		return actNo;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setActNo(int actNo) {
+		this.actNo = actNo;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getName() {
+		return name;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPass() {
+		return pass;
+	}
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+
+	public String getBalance() {
+		return balance;
+	}
+
+	public void setBalance(String balance) {
+		this.balance = balance;
 	}
 
 	@Override
 	public String toString() {
-		return "Customer [username=" + username + ", password=" + password + "]";
+		return "Customer [actNo=" + actNo + ", name=" + name + ", email=" + email + ", pass=" + pass + ", balance="
+				+ balance + "]";
 	}
 
-	public Customer(String username, String password) {
+	public Customer(int actNo, String name, String email, String pass, String balance) {
 		super();
-		this.username = username;
-		this.password = password;
+		this.actNo = actNo;
+		this.name = name;
+		this.email = email;
+		this.pass = pass;
+		this.balance = balance;
 	}
+	
+	
+	
+	
 	
 	
 }
